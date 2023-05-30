@@ -49,7 +49,7 @@ class AVLTree:
             else:
                 self._add(node.left, value)
 
-        elif node.value < value:
+        elif node.value <= value:
             if node.right is None:
                 node.setRight(Node(value))
                 self._len += 1
