@@ -43,9 +43,7 @@ class BinaryHeap:
         ...
 
     def _swap(self, i: int, j: int):
-        value = self._values[i]
-        self._values[i] = self._values[j]
-        self._values[j] = value
+        self._values[i], self._values[j] = self._values[j], self._values[i]
 
     def _swapAndReturn(self, i, j):
         self._swap(i, j)
