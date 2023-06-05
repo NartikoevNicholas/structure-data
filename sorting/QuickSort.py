@@ -1,14 +1,14 @@
 
 # ненавижу этот алгоритм
-def sorting_quick(array: list, low_index: int, high_index: int) -> list:
+def quick_sort(array: list, low_index: int, high_index: int) -> list:
     if low_index - high_index != 0:
-        index = split(array, low_index, high_index)
-        sorting_quick(array, low_index, index)
-        sorting_quick(array, index + 1, high_index)
+        index = _split(array, low_index, high_index)
+        quick_sort(array, low_index, index)
+        quick_sort(array, index + 1, high_index)
     return array
 
 
-def split(array: list, low_index: int, high_index: int) -> int:
+def _split(array: list, low_index: int, high_index: int) -> int:
     result = low_index
     pivot = array[high_index - 1]
     for i in range(low_index, high_index):

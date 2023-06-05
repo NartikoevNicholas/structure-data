@@ -1,18 +1,18 @@
 
 
 # O(nlogn)
-def sort_merge(array: list) -> list:
+def merge_sort(array: list) -> list:
     n = len(array)
 
     if n <= 1:
         return array
 
-    first_array = sort_merge(array[:int(n/2)])
-    second_array = sort_merge(array[int(n/2):])
-    return merge(first_array, second_array)
+    first_array = merge_sort(array[:int(n / 2)])
+    second_array = merge_sort(array[int(n / 2):])
+    return _merge(first_array, second_array)
 
 
-def merge(a: list, b: list) -> list:
+def _merge(a: list, b: list) -> list:
     result = []
 
     a_len = len(a)
