@@ -1,6 +1,6 @@
 
 # O(n^2)
-def sort_insert(array: list) -> list:
+def insert_sort(array: list) -> list:
     for i in range(len(array)):
         j = i
         while j > 0 and array[j] < array[j - 1]:
