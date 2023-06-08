@@ -1,4 +1,4 @@
-from Node import Node
+from StructureData.Tree import Node
 
 
 class AVLTree:
